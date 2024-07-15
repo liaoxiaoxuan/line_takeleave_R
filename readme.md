@@ -119,3 +119,13 @@ https://medium.com/@m23568n/line-bot%E4%B8%B2%E6%8E%A5line-notify%E5%AF%A6%E7%8F
 - 【GAS】用Line Bot&Line Notify轉發群組訊息給自己
 https://emtech.cc/post/line2notify/ 
 
+## 貢獻與成果  
+
+1. 自動化回覆家長請假訊息   
+專案旨在自動化處理家長透過 Line 發送的請假訊息，大幅簡化了導師和家長之間的溝通流程。使用者可以即時收到請假訊息通知，並迅速作出回應，提升了導師管理請假狀況的效率。  
+
+2. 效能提升和操作便利性 
+通過整合 LINE Bot SDK 和 LINE Notify，成功實現了即時通知和訊息轉發功能，使得家長和導師能夠快速溝通，確保學生請假事務的及時處理。這不僅提高了操作的便利性，也降低了人工處理請假訊息所需的時間和成本。    
+
+3. 技術技能展示 
+展示了使用 Flask 框架、LINE Bot SDK 和 LINE Notify API 開發系統的能力，並透過 Python 實現了對 LINE 平台的有效整合和應用。這些技術不僅僅是技術能力的展示，更是在提升學校管理和溝通方面的實際應用。   
