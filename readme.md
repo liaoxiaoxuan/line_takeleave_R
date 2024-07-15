@@ -52,4 +52,16 @@ python app.py
 
 2-1. 登錄 LINE Developers   
 2-2. 將 Webhook URL 設置為 `https://your-domain/callback`    
-    
+
+## 程式說明    
+
+### 主要函數   
+- `callback()`：處理來自 `/callback` 的 POST 請求，驗證簽名並使用 WebhookHandler 處理請求。 
+- `handle_message(event)`：處理 LINE 發送的訊息事件，根據訊息內容回覆相應的文字。   
+- `replyMessage(user_message_lower)`：根據家長的請假訊息，自動回覆對應的內容。  
+- `line_notify_image(message)`：透過 LINE Notify 將訊息轉傳至私人帳號或群組。   
+
+### 主要模組    
+- `Flask`：用於建立 Web 應用。    
+- `linebot`：用於處理 LINE Bot 和 LINE Notify 的互動。    
+- `requests`：用於發送 HTTP 請求。    
