@@ -17,28 +17,33 @@
 3. 將家長的請假訊息轉傳至私人帳號或群組。   
 
 ## 安裝說明 
-### 1. 複製此專案到本地端   
+1. 複製此專案到本地端   
 
-```sh
-git clone https://github.com/liaoxiaoxuan/  line_takeleave_pub.git
-```
+    ```sh
+    git clone https://github.com/liaoxiaoxuan/line_takeleave_pub.git
+    ```
 
-### 2. 進入專案目錄 
+2. 進入專案目錄 
 
-```sh
-cd line_takeleave_pub
-```
+    ```sh
+    cd line_takeleave_pub
+    ```
 
-### 3. 安裝所需的套件   
+3. 安裝所需套件   
 
-```sh
-pip install -r requirements.txt
-```
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-### 4. 配置設定檔案 
-
-4-1. 打開 `..\local\config.json`  
-4-2. 填入 LINE Channel Access Token 和 Channel Secret   
+4. 配置設定檔案  
+設置配置文件`config.json`，包含 LINE Bot 的 Channel Access Token、Channel Secret 和 Line Notify Token：
+    ```json
+    {
+    "channel_access_token": "YOUR_CHANNEL_ACCESS_TOKEN",
+    "channel_secret": "YOUR_CHANNEL_SECRET",
+    "line_notify_token": "YOUR_LINE_NOTIFY_TOKEN"
+    }
+    ```
 
 ## 使用方法 
 
@@ -55,6 +60,27 @@ python app.py
 
 ## 程式說明    
 
+### 程式架構    
+這個專案使用 Flask 框架來建立 Web 應用，並與 LINE Bot SDK 和 LINE Notify 進行互動。主要分為以下幾個模組：   
+
+1. Flask 應用（app.py） 
+
+- 主要負責接收來自 LINE 平台的 Webhook 請求，並根據收到的事件進行處理。  
+- 包含了 `callback()` 函數來處理 `/callback` 的 POST 請求，並使用 `WebhookHandler` 驗證簽名及處理請求。    
+
+2. LINE Bot SDK（linebot.v3）  
+
+- 提供了 `WebhookHandler` 來處理 LINE 平台發送的事件，例如消息事件。   
+- 使用 `MessagingApi` 來與 LINE Messaging API 進行互動，例如發送回覆消息。 
+
+3. LINE Notify 
+
+- 使用 `requests` 模組發送 HTTP POST 請求到 LINE Notify API，將收到的訊息轉發至指定的 LINE 帳號或群組。   
+
+4. 設定檔案（config.json）  
+
+- 包含了 channel_access_token、channel_secret 和 line_notify_token 的配置資訊，用於授權 LINE Bot 和 LINE Notify 的使用權限。    
+
 ### 主要函數   
 - `callback()`：處理來自 `/callback` 的 POST 請求，驗證簽名並使用 WebhookHandler 處理請求。 
 - `handle_message(event)`：處理 LINE 發送的訊息事件，根據訊息內容回覆相應的文字。   
@@ -65,3 +91,4 @@ python app.py
 - `Flask`：用於建立 Web 應用。    
 - `linebot`：用於處理 LINE Bot 和 LINE Notify 的互動。    
 - `requests`：用於發送 HTTP 請求。    
+
