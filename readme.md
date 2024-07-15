@@ -92,6 +92,17 @@ python app.py
 - `linebot`：用於處理 LINE Bot 和 LINE Notify 的互動。    
 - `requests`：用於發送 HTTP 請求。    
 
+## 常見問題 
+
+1. 如何設定 LINE Bot 的 Webhook URL？   
+登入 LINE Developers，將 Webhook URL 設置為 https://your-domain/callback 
+
+2. 如何取得 LINE Bot 的 Channel Access Token 和 Channel Secret？    
+在 LINE Developers 開發者控制台創建 Messaging API，即可取得 Channel Access Token 和 Channel Secret。    
+
+3. 如何取得 LINE Notify 的 Token？  
+登入 LINE Notify，獲取權杖（Token）即可使用 LINE Notify API。   
+
 ## 其他參考資源 
 
 ### 1. Line message API 聊天機器人 
