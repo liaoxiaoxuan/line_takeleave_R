@@ -95,7 +95,7 @@ python app.py
 ## 常見問題 
 
 1. 如何設定 LINE Bot 的 Webhook URL？   
-登入 LINE Developers，將 Webhook URL 設置為 https://your-domain/callback 
+登入 LINE Developers，將 Webhook URL 設置為 https://your-domain/callback 。 
 
 2. 如何取得 LINE Bot 的 Channel Access Token 和 Channel Secret？    
 在 LINE Developers 開發者控制台創建 Messaging API，即可取得 Channel Access Token 和 Channel Secret。    
@@ -109,14 +109,14 @@ python app.py
     
 - 使用flask來串接line message API 聊天機器人   
 https://www.youtube.com/watch?v=TSLFkwvj8xA 
-- flask_lineAPI 
+- flask_lineAPI    
 https://github.com/wilsonsujames/flask_lineAPI/blob/master/line_api/app.py  
 
 ### 2. Line Bot 串接 Line Notify 轉傳訊息    
 
 - Line-Bot 串接 Line-Notify 實現跨群組轉播訊息  
 https://medium.com/@m23568n/line-bot%E4%B8%B2%E6%8E%A5line-notify%E5%AF%A6%E7%8F%BE%E8%B7%A8%E7%BE%A4%E7%B5%84%E8%BD%89%E6%92%AD%E8%A8%8A%E6%81%AF-c0acfed7d9f6 
-- 【GAS】用Line Bot&Line Notify轉發群組訊息給自己
+- 【GAS】用Line Bot&Line Notify轉發群組訊息給自己   
 https://emtech.cc/post/line2notify/ 
 
 ## 貢獻與成果  
@@ -129,6 +129,6 @@ https://emtech.cc/post/line2notify/
 
 3. 技術技能展示    
 展示了使用 Flask 框架、LINE Bot SDK 和 LINE Notify API 開發系統的能力，並透過 Python 實現了對 LINE 平台的有效整合和應用。這些技術不僅僅是技術能力的展示，更是在提升學校管理和溝通方面的實際應用。   
-    
+
 ## 未來展望 
-未來，計劃進一步提升自動回覆的演算法，例如導入 Google AI Gemini、ChatGPT API 等模型，增強對不同請假情境的辨識和處理能力。同時，也將考慮導入更多的機器學習技術，以進一步提升系統的自動化和智能化水平。
+未來，計劃進一步提升自動回覆的演算法，例如導入 Google AI Gemini、ChatGPT API 等模型，增強對不同請假情境的辨識和處理能力。同時，也將考慮導入更多的機器學習技術，以進一步提升系統的自動化和智能化水平。   
