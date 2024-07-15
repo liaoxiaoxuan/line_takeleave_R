@@ -92,3 +92,19 @@ python app.py
 - `linebot`：用於處理 LINE Bot 和 LINE Notify 的互動。    
 - `requests`：用於發送 HTTP 請求。    
 
+## 其他參考資源 
+
+### 1. Line message API 聊天機器人 
+    
+- 使用flask來串接line message API 聊天機器人   
+https://www.youtube.com/watch?v=TSLFkwvj8xA 
+- flask_lineAPI 
+https://github.com/wilsonsujames/flask_lineAPI/blob/master/line_api/app.py  
+
+### 2. Line Bot 串接 Line Notify 轉傳訊息    
+
+- Line-Bot 串接 Line-Notify 實現跨群組轉播訊息  
+https://medium.com/@m23568n/line-bot%E4%B8%B2%E6%8E%A5line-notify%E5%AF%A6%E7%8F%BE%E8%B7%A8%E7%BE%A4%E7%B5%84%E8%BD%89%E6%92%AD%E8%A8%8A%E6%81%AF-c0acfed7d9f6 
+- 【GAS】用Line Bot&Line Notify轉發群組訊息給自己
+https://emtech.cc/post/line2notify/ 
+
